@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Adding necessary tools/apps
+    'rest_framework',
+    'fdApp'
 ]
 
 MIDDLEWARE = [
@@ -74,10 +77,15 @@ WSGI_APPLICATION = 'fdProject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+    # Adding DB connection details
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "food_diary_db",
+        'USER': "admin",
+        'PASSWORD': "FngPUsA1kBlEIb288aWJZXE4Y3dcNqKB",
+        'HOST': "dpg-cqd7vd1u0jms73earvp0-a.oregon-postgres.render.com",
+        'PORT': 5432
+    }    
 }
 
 
